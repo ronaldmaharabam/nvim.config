@@ -17,3 +17,22 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup("plugins")
+
+local test = function ()
+    local ts = vim.fn.input("Tab size > ")
+    local is_number = tonumber(ts)
+    if is_number then
+        vim.opt.tabstop = is_number
+        vim.opt.softtabstop = is_number
+        vim.opt.shiftwidth = is_number
+        print"tab size changed"
+    end
+
+end
+vim.keymap.set("n", "<leader>ct", test, {noremap = true})
+
+
+vim.keymap.set("n", "<leader>r",  ":w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % <CR>")
+
+
+vim.opt.rtp:append("/Users/ronaldmaharabam/Play/cppcomp")
