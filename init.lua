@@ -35,4 +35,3 @@ vim.keymap.set("n", "<leader>ct", test, {noremap = true})
 vim.keymap.set("n", "<leader>r",  ":w <CR> :!g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 -o %< % <CR>")
 
 
-vim.opt.rtp:append("/Users/ronaldmaharabam/Play/cppcomp")
