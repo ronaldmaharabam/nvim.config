@@ -12,7 +12,10 @@ return {
     dependencies = {
         {
             "rcarriga/nvim-dap-ui",
-        }
+        },
+        {
+            "nvim-neotest/nvim-nio",
+        },
     },
     config = function ()
         require("dap").adapters["pwa-node"] = {
@@ -61,6 +64,7 @@ return {
             dapui.close()
         end
         vim.keymap.set('n', '<leader>db', function() require('dap').continue() end)
+        vim.keymap.set('n', '<leader>B', function() require('dap').toggle_breakpoint() end)
     end
 }
 --

@@ -6,7 +6,7 @@ return {
 		config.setup({
 			ensure_installed = {'lua', 'javascript', 'c'},
 			highlight = {enable = true},
-			indent = {enable = true}
+			-- indent = {enable = true}
 		})
 	end
 }
